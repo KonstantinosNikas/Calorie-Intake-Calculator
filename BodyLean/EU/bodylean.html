@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Needs Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="logo"> <h1>Calorie Intake Calculator</h1> </div>
+          <ul class="links">
+            <li><a href="bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BMR/EU/bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li> 
+          </ul>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BMR/EU/bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li>  
+        </div>
+      </header>
+      <button id="unit">Change unit (lbs)</button> 
+    <div class="container">
+        <h2>Lean Body Mass (LBM) Calculator</h2>
+        <form id="calorieForm">
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="input-group">
+                <label for="bodyFat">Body Fat (%):</label>
+                <input type="number" id="bodyFat" required>
+            </div>            
+            <div class="input-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity">
+                    <option value="sedentary">Sedentary (little or no exercise)</option>
+                    <option value="lightly_active">Lightly active (light exercise/sports 1-3 days/week)</option>
+                    <option value="moderately_active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="very_active">Very active (hard exercise/sports 6-7 days a week)</option>
+                    <option value="extra_active">Extra active (very hard exercise/sports & physical job)</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateCalorieNeeds()">Calculate</button>
+        </form>
+        <div id="calorie-needs-result"></div>
+        <br><br>
+            <div><img src="body-fat-muscle-percentage-overweight-600nw-2093865433.jpg.webp" ></div>
+        <br><br>
+        <div id="about">About the Calculator</div> 
+        <br>
+        <strong>Purpose:</strong>
+        <p>  Measures the percentage of fat compared to lean tissue (muscle, bone, water, etc.) in your body.</p>
+        <strong>Use in Calorie Counting:</strong>
+        <p> Knowing your body fat percentage can help tailor your diet and exercise plan more specifically to your body composition goals. For example, if you're looking to increase muscle mass and decrease body fat, knowing your body fat percentage can help track progress and adjust your calorie intake and macronutrient distribution (proteins, fats, carbohydrates) accordingly.</p>
+        <strong>Method:</strong>
+        <p> Body fat can be measured through various methods, such as skinfold measurements, bioelectrical impedance analysis (BIA), DEXA scans, and more. These methods vary in accuracy and accessibility.</p>
+
+    </div>
+    <footer>
+        <ul class="menu">
+            <li><a href="bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BMR/EU/bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li> 
+          </ul>
+          <p class="menu"> ©2024 .DevArchitects | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

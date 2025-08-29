@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Needs Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="logo"> <h1>Calorie Intake Calculator</h1> </div>
+          <ul class="links">
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BodyLean/US/bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li> 
+          </ul>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BodyLean/US/bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li>  
+        </div>
+      </header>
+      <button id="unit">Change unit (kg)</button> 
+    <div class="container">
+        <h2>Basal Metabolic Rate (BMR) Calculator</h2>
+        <form id="calorieForm">
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="input-group">
+                <label for="weight">Pounds (lbs):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height (ft):</label>
+                <input type="number" id="height" required>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity">
+                    <option value="sedentary">Sedentary (little or no exercise)</option>
+                    <option value="lightly_active">Lightly active (light exercise/sports 1-3 days/week)</option>
+                    <option value="moderately_active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="very_active">Very active (hard exercise/sports 6-7 days a week)</option>
+                    <option value="extra_active">Extra active (very hard exercise/sports & physical job)</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateCalorieNeeds()">Calculate</button>
+        </form>
+        <div id="calorie-needs-result"></div>
+        <br><br>
+        <div id="about">About the Calculator</div> 
+        <br>
+        <strong>Purpose:</strong>
+        <p> Represents the number of calories your body needs to perform basic life-sustaining functions like breathing, circulation, cell production, nutrient processing, and temperature regulation when at rest.</p>
+        <strong>Use in Calorie Counting:</strong>
+        <p> BMR is the foundational starting point for calculating your total daily energy expenditure (TDEE), which includes all the calories you burn through physical activity and digestion. Knowing your BMR helps in setting a baseline for how many calories you should consume to maintain your current weight. To lose weight, you would aim to consume fewer calories than your TDEE; to gain weight, you'd consume more.</p>
+        <strong>Method:</strong>
+        <p> Calculated using formulas like the Harris-Benedict Equation or the Mifflin-St Jeor Equation, which take into account age, sex, weight, and height. There are also online calculators and apps that can estimate your BMR. </p>
+
+    </div>
+    <footer>
+        <ul class="menu">
+            <li><a href="file:///Users/kostasnikas/Desktop/Calorie%20Intake%20Calculator/BodyLean/US/bodylean.html">Lean Body Mass</a></li> 
+            <li><a href="bmr.html">Basal Metabolic Rate</a></li> 
+            <li><a href="about.html">About Us</a></li> 
+          </ul>
+          <p class="menu"> ©2024 .DevArchitects | All Rights Reserved</p>
+    </footer>
+    <script src="bmr_script.js"></script>
+</body>
+</html>
